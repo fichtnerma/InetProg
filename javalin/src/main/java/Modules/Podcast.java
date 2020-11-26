@@ -42,4 +42,8 @@ public class Podcast {
     public void setEpisodes(List<Episode> episodes) {
         this.episodes = episodes;
     }
+
+    public void addEpisode(int index,Episode episode){
+        episodes.add(index,episode);
+    }
 }

@@ -1,11 +1,12 @@
 package Modules;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Episode {
     private String title;
     private String description;
-    private Date uploadDate;
+    private LocalDate uploadDate;
     private String audioLink;
 
     public String getDescription() {
@@ -16,7 +17,7 @@ public class Episode {
         return audioLink;
     }
 
-    public Date getUploadDate() {
+    public LocalDate getUploadDate() {
         return uploadDate;
     }
 
@@ -36,7 +37,7 @@ public class Episode {
         this.audioLink = audioLink;
     }
 
-    public void setUploadDate(Date uploadDate) {
+    public void setUploadDate(LocalDate uploadDate) {
         this.uploadDate = uploadDate;
     }
 }
