@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<div class="Sidebar col-2" th:fragment="sidebar" style="background-color:#dddddd; height:100vh;position: fixed;z-index: 10; width:250px">
+    <nav>
+        <ul style="list-style:none">
+            <li><a th:href="@{~/all}">Alle</a></li>
+            <li><a th:href="@{~/podcast}">Podcast</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="Player" th:fragment="player" style="background-color:#000;z-index:30;position: fixed;height: 100px;width: 100vw;left:0;bottom:0;">
+
+</div>
+</body>
+</html>

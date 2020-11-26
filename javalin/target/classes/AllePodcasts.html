@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body style="
+overflow-x: hidden;
+">
+<div th:replace="/fragments.html :: sidebar">
+</div>
+<div class="Content" style="padding-bottom: 150px; padding-left: 300px">
+    <div class="row">
+        <h1>Alle Podcasts</h1>
+    </div>
+    <div th:each="i : ${#numbers.sequence( 1, 4)}" class="row">
+        <div th:each="i : ${#numbers.sequence( 1, 2)}" class="col-6">
+            <a class="List-Element" th:href="@{~/podcast}" style="color: black;text-decoration: none;">
+                <div class="col-4">
+                    <img src="https://www.tagesspiegel.de/images/heprodimagesfotos88120190601flauschig_465_1_20190531114637246-jpg/24410980/3-format43.jpg" width="50" height="50">
+                </div>
+                <div class="col-8">
+                    <h2>
+                        Podcast 2
+                    </h2>
+                    <p>
+                        Bacon ipsum dolor amet buffalo jowl landjaeger turducken bresaola tail pork fatback.
+                        Bresaola pork bacon short loin ham hock chuck filet mignon, cupim ball tip biltong.
+                        Short loin salami buffalo landjaeger sausage shankle bacon pancetta shoulder chicken
+                        turducken pork chop ham burgdoggen cow.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div th:replace="/fragments.html :: player">
+
+</div>
+</body>
+</html>
