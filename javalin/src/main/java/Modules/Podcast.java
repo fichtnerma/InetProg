@@ -1,3 +1,7 @@
+package Modules;
+
+import Modules.Episode;
+
 import java.util.ArrayList;
 import java.util.List;
 
