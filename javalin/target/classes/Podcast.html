@@ -17,7 +17,7 @@
                     <img src="https://www.tagesspiegel.de/images/heprodimagesfotos88120190601flauschig_465_1_20190531114637246-jpg/24410980/3-format43.jpg" width="100" height="100">
                 </div>
                 <div class="col-3 float-left">
-                    <h1>Modules.Podcast Test</h1>
+                    <h1 th:text = "${podcast.title}">Modules.Podcast Test</h1>
                     <h4 class="author">von Max Musterman</h4>
                     <div>
                         <button> Play</button>
@@ -28,9 +28,7 @@
             <div class="row">
                 <div class="col-6">
                     <h4>Information</h4>
-                    <p>Leberkas turducken spare ribs hamburger beef ribs meatball chicken tenderloin chislic ham drumstick ground round sirloin.
-                        Boudin ham hock fatback pork chop, tongue filet mignon biltong buffalo spare ribs.
-                        Ham hock kevin sirloin alcatra corned beef chislic cupim meatloaf brisket burgdoggen kielbasa.</p>
+                    <p th:text = "${podcast.description}"></p>
                 </div>
             </div>
         </div>

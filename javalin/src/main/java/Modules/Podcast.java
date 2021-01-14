@@ -9,6 +9,13 @@ import java.util.List;
 @Entity
 public class Podcast {
     @Id
+    @SequenceGenerator
+            (name = "PODCAST_ID_GENERATOR", sequenceName =
+                    "PODCAST_ID", initialValue = 1, allocationSize = 1)
+    @GeneratedValue
+            (strategy = GenerationType.SEQUENCE, generator =
+                    "PODCAST_ID_GENERATOR")
+    @Column(name = "Podcast_ID", precision = 2)
     private int podcastId;
     @Column (name="Title", length=255)
     private String title;
@@ -17,7 +24,7 @@ public class Podcast {
     private User author;
     @Column (name="Description" , length=655)
     private String description;
-    @OneToMany (mappedBy = "episodeId")
+    @OneToMany
     private List<Episode> episodes = new ArrayList<Episode>();
 
     public String getTitle(){
